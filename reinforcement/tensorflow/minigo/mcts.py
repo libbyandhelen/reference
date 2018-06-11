@@ -272,6 +272,8 @@ class MCTSNode(object):
         p_rel = p_delta / self.child_prior
         # Dump out some statistics
         output = []
+        print(self.Q)
+        print(type(self.Q))
         output.append("{q:.4f}\n".format(q=self.Q))
         output.append(self.most_visited_path())
         output.append(
