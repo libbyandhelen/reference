@@ -69,7 +69,7 @@ class Model(nn.Module):
                 padding=(params['k'] - 1) / 2,
             ),
             nn.BatchNorm2d(
-                num_features=features.NEW_FEATURES_PLANES,
+                num_features=params['k'],
                 eps=1e-5,
                 momentum=.997,
             ),
