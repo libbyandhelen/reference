@@ -280,9 +280,10 @@ def selfplay_cache_model(
     else:
         fname = os.path.join(output_dir, "{}.tfrecord.zz".format(output_name))
 
+    print(fname)
     # preprocessing.write_tf_examples(fname, tf_examples)
     preprocessing.write_dataset(fname, dataset)
-    print(os.listdir(output_dir))
+    print("files", os.listdir(output_dir))
     qmeas.stop_time('selfplay')
 
 
