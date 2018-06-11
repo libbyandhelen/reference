@@ -34,6 +34,7 @@ class DualNetwork():
         self.model = Model(self.hparams)
         torch.cuda.set_device(0)
         self.model.cuda()
+
         if self.save_file is not None:
             self.model.load_state_dict(torch.load(self.save_file))
 
@@ -52,8 +53,8 @@ class DualNetwork():
         processed = np.moveaxis(processed, -1, 1)
         processed = torch.from_numpy(processed)
         probabilities, value, logits = self.model(processed.float())
-        probabilities = probabilities.detach().numpy()
-        value = value.detach().numpy()
+        probabilities = probabilities.detach().cpu().numpy()
+        value = value.detach().cpu().numpy()
         value = np.squeeze(value, axis=1)
         if use_random_symmetry:
             probabilities = symmetries.invert_symmetries_pi(
@@ -152,7 +153,8 @@ class Model(nn.Module):
         )
 
     def forward(self, features):
-        initial_output = self.initial_layer(features)
+        device = torch.device('cuda')
+        initial_output = self.initial_layer(features.to(device))
         shared_output = initial_output
 
         # the shared stack
