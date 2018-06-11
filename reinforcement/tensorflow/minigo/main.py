@@ -98,13 +98,13 @@ def bootstrap(
         with tempfile.TemporaryDirectory() as working_dir:
             _ensure_dir_exists(working_dir)
             _ensure_dir_exists(os.path.dirname(model_save_path))
-            dual_net.bootstrap(working_dir)
-            dual_net.export_model(working_dir, model_save_path)
+            model_name = dual_net.bootstrap(working_dir)
+            dual_net.export_model(working_dir, model_name, model_save_path)
     else:
         _ensure_dir_exists(working_dir)
         _ensure_dir_exists(os.path.dirname(model_save_path))
-        dual_net.bootstrap(working_dir)
-        dual_net.export_model(working_dir, model_save_path)
+        model_name = dual_net.bootstrap(working_dir)
+        dual_net.export_model(working_dir, model_name, model_save_path)
     qmeas.stop_time('bootstrap')
 
 

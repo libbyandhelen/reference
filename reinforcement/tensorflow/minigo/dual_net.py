@@ -1,5 +1,7 @@
 import math
+import shutil
 
+import os
 import torch
 from torch import nn
 from torch.autograd import Variable
@@ -238,4 +240,20 @@ def train(working_dir, tf_records, generation_num, **hparams):
             optimizer.step()
 
             print("epoch: %s | step: %s | loss: %s" % (epoch, step, loss.data[0]))
-        torch.save(model.state_dict(), )
+        torch.save(model.state_dict(), working_dir)
+
+
+def bootstrap(working_dir, **hparams):
+    hparams = get_default_hyperparams(**hparams)
+
+    estimator_initial_checkpoint_name = 'model.ckpt-1'
+    print("working_dir", working_dir)
+    save_file = os.path.join(working_dir, estimator_initial_checkpoint_name)
+    model = Model(hparams)
+    torch.save(model.state_dict(), save_file)
+    return estimator_initial_checkpoint_name
+
+
+def export_model(working_dir, model_name, model_path):
+    shutil.copy2(os.path.join(working_dir, model_name), model_path)
+    print("model_path", model_path)
