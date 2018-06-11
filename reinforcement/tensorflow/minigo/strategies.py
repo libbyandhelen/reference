@@ -202,8 +202,6 @@ class MCTSPlayerMixin:
 
     def should_resign(self):
         '''Returns true if the player resigned.  No further moves should be played'''
-        print(self.root.Q_perspective)
-        print(self.resign_threshold)
         return self.root.Q_perspective < self.resign_threshold
 
     def set_result(self, winner, was_resign):
