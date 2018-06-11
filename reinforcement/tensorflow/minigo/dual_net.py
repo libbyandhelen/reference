@@ -30,6 +30,8 @@ class DualNetwork():
 
     def initialize_graph(self):
         self.model = Model(self.hparams)
+        torch.cuda.set_device(0)
+        self.model.cuda()
         if self.save_file is not None:
             self.model.load_state_dict(torch.load(self.save_file))
 
