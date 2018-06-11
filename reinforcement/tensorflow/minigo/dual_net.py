@@ -66,7 +66,7 @@ class Model(nn.Module):
                 in_channels=features.NEW_FEATURES_PLANES,
                 out_channels=params['k'],
                 kernel_size=(3, 3),
-                padding=(params['k'] - 1) / 2,
+                padding=(3 - 1) / 2,
             ),
             nn.BatchNorm2d(
                 num_features=params['k'],
@@ -80,7 +80,7 @@ class Model(nn.Module):
                 in_channels=params['k'],
                 out_channels=params['k'],
                 kernel_size=(3, 3),
-                padding=(params['k']-1)/2,
+                padding=(3-1)/2,
             ),
             nn.BatchNorm2d(
                 num_features=params['k'],
@@ -93,7 +93,7 @@ class Model(nn.Module):
                 in_channels=params['k'],
                 out_channels=params['k'],
                 kernel_size=(3, 3),
-                padding=(params['k'] - 1) / 2,
+                padding=(3 - 1) / 2,
             ),
             nn.BatchNorm2d(
                 num_features=params['k'],
