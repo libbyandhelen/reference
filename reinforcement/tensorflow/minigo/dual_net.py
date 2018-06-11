@@ -234,6 +234,8 @@ def train(working_dir, tf_records, generation_num, **hparams):
 
     for epoch in range(10):
         for step, (features, pi, outcome) in enumerate(loader):
+            features = features.permute(0, 3, 1, 2)
+            print(features.shape)
             features = Variable(features.float())
             pi = Variable(pi.float())
             outcome = Variable(outcome.float())
