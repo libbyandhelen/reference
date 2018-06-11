@@ -48,8 +48,7 @@ class DualNetwork():
 
         processed = np.array(processed)
         processed = np.moveaxis(processed, -1, 1)
-        print(processed.shape)
-        processed = torch.from_numpy(processed)
+        processed = torch.from_numpy(processed.float())
         probabilities, value = self.model(processed)
         if use_random_symmetry:
             probabilities = symmetries.invert_symmetries_pi(
