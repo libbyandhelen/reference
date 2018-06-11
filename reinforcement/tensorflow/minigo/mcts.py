@@ -116,7 +116,7 @@ class MCTSNode(object):
     @property
     def Q_perspective(self):
         "Return value of position, from perspective of player to play."
-        return self.Q * self.position.to_play
+        return self.Q[0] * self.position.to_play
 
     def select_leaf(self):
         current = self
@@ -272,9 +272,11 @@ class MCTSNode(object):
         p_rel = p_delta / self.child_prior
         # Dump out some statistics
         output = []
-        print(self.Q)
-        print(type(self.Q))
-        output.append("{q:.4f}\n".format(q=self.Q))
+        print(self.Q[0])
+        print(type(self.Q[0]))
+        print(self.W)
+        print(type(self.W))
+        output.append("{q:.4f}\n".format(q=self.Q[0]))
         output.append(self.most_visited_path())
         output.append(
             "move:  action      Q      U      P    P-Dir    N  soft-N  p-delta  p-rel\n")
