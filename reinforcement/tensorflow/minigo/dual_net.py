@@ -222,7 +222,7 @@ def _round_power_of_two(n):
 def train(working_dir, tf_records, generation_num, **hparams):
     assert generation_num > 0, "Model 0 is random weights"
     hparams = get_default_hyperparams(**hparams)
-    model = Model(hparams)
+    model = Model(hparams).cuda()
 
     loader = preprocessing.get_input_tensors(TRAIN_BATCH_SIZE, tf_records)
     optimizer = torch.optim.SGD(
@@ -234,14 +234,17 @@ def train(working_dir, tf_records, generation_num, **hparams):
 
     for epoch in range(10):
         for step, (features, pi, outcome) in enumerate(loader):
+            features = features.permute(0, 3, 1, 2)
             features = Variable(features.float())
             pi = Variable(pi.float())
-            outcome = Variable(outcome.float())
+            outcome = Variable(outcome.long())
 
             policy_output, value_output, logits = model(features)
 
             loss = nn.CrossEntropyLoss()
-            policy_cost = torch.mean(loss(logits, pi))
+            print(logits.shape)
+            print(pi.shape)
+            policy_cost = torch.mean(loss(logits.float().cuda(), pi.long().cuda()))
             value_cost = torch.mean((value_output - outcome)**2)
 
             combined_cost = policy_cost + value_cost

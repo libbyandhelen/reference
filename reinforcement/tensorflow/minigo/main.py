@@ -280,10 +280,8 @@ def selfplay_cache_model(
     else:
         fname = os.path.join(output_dir, "{}.tfrecord.zz".format(output_name))
 
-    print(fname)
     # preprocessing.write_tf_examples(fname, tf_examples)
     preprocessing.write_dataset(fname, dataset)
-    print("files", os.listdir(output_dir))
     qmeas.stop_time('selfplay')
 
 
@@ -331,9 +329,9 @@ def gather(
         loader = preprocessing.shuffle_examples(examples_per_record,record_files)
         for i, (feature, pi, outcome) in enumerate(tqdm(loader)):
             torch_dataset = Data.TensorDataset(
-                torch.from_numpy(feature),
-                torch.from_numpy(pi),
-                torch.from_numpy(outcome),
+                feature,
+                pi,
+                outcome,
             )
             output_record = os.path.join(output_directory, '{}-{}.tfrecord.zz'.format(model_name, str(i)))
             preprocessing.write_dataset(output_record, torch_dataset)
