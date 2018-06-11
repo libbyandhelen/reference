@@ -235,7 +235,6 @@ def train(working_dir, tf_records, generation_num, **hparams):
     for epoch in range(10):
         for step, (features, pi, outcome) in enumerate(loader):
             features = features.permute(0, 3, 1, 2)
-            print(features.shape)
             features = Variable(features.float())
             pi = Variable(pi.float())
             outcome = Variable(outcome.long())
@@ -243,8 +242,8 @@ def train(working_dir, tf_records, generation_num, **hparams):
             policy_output, value_output, logits = model(features)
 
             loss = nn.CrossEntropyLoss()
-            print(logits)
-            print(pi)
+            print(logits.shape)
+            print(pi.shape)
             policy_cost = torch.mean(loss(logits.float().cuda(), pi.long().cuda()))
             value_cost = torch.mean((value_output - outcome)**2)
 
