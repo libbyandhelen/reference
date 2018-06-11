@@ -2,6 +2,8 @@ import math
 import shutil
 
 import os
+
+import numpy as np
 import torch
 from torch import nn
 from torch.autograd import Variable
@@ -46,8 +48,13 @@ class DualNetwork():
             syms_used, processed = symmetries.randomize_symmetries_feat(
                 processed)
 
-        print(processed)
-        probabilities, value = self.model(processed)
+        processed = np.array(processed)
+        processed = np.moveaxis(processed, -1, 1)
+        processed = torch.from_numpy(processed)
+        probabilities, value, logits = self.model(processed.float())
+        probabilities = probabilities.detach().numpy()
+        value = value.detach().numpy()
+        value = np.squeeze(value, axis=1)
         if use_random_symmetry:
             probabilities = symmetries.invert_symmetries_pi(
                 syms_used, probabilities)
@@ -64,10 +71,10 @@ class Model(nn.Module):
                 in_channels=features.NEW_FEATURES_PLANES,
                 out_channels=params['k'],
                 kernel_size=(3, 3),
-                padding=(params['k'] - 1) / 2,
+                padding=(3 - 1) / 2,
             ),
             nn.BatchNorm2d(
-                num_features=features.NEW_FEATURES_PLANES,
+                num_features=params['k'],
                 eps=1e-5,
                 momentum=.997,
             ),
@@ -78,7 +85,7 @@ class Model(nn.Module):
                 in_channels=params['k'],
                 out_channels=params['k'],
                 kernel_size=(3, 3),
-                padding=(params['k']-1)/2,
+                padding=(3-1)/2,
             ),
             nn.BatchNorm2d(
                 num_features=params['k'],
@@ -91,7 +98,7 @@ class Model(nn.Module):
                 in_channels=params['k'],
                 out_channels=params['k'],
                 kernel_size=(3, 3),
-                padding=(params['k'] - 1) / 2,
+                padding=(3 - 1) / 2,
             ),
             nn.BatchNorm2d(
                 num_features=params['k'],
@@ -110,7 +117,7 @@ class Model(nn.Module):
                 padding=0,
             ),
             nn.BatchNorm2d(
-                num_features=params['k'],
+                num_features=2,
                 eps=1e-5,
                 momentum=.997,
             ),
@@ -130,7 +137,7 @@ class Model(nn.Module):
                 padding=0,
             ),
             nn.BatchNorm2d(
-                num_features=params['k'],
+                num_features=1,
                 eps=1e-5,
                 momentum=.997,
             ),

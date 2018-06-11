@@ -47,6 +47,8 @@ def play(network, readouts, resign_threshold, verbosity=0):
     # affects the first move of the game.
     first_node = player.root.select_leaf()
     prob, val = network.run(first_node.position)
+    # print("prob", prob)
+    # print("val", val)
     first_node.incorporate_results(prob, val, first_node)
 
     while True:
