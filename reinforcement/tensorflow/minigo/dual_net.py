@@ -56,6 +56,8 @@ class DualNetwork():
             probabilities = symmetries.invert_symmetries_pi(
                 syms_used, probabilities)
 
+        print(value.shape)
+        print(value)
         return probabilities, value
 
 
