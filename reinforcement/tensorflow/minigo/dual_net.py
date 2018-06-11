@@ -153,6 +153,8 @@ class Model(nn.Module):
         # the shared stack
         for i in range(self.params['num_shared_layers']):
             tmp_output = self.res_layer(shared_output)
+            print(tmp_output.shape)
+            print(shared_output.shape)
             shared_output = self.relu(shared_output+tmp_output)
 
         # policy head
