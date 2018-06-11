@@ -31,11 +31,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="selfplay_mcts.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="selfplay_mcts.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/selfplay_mcts.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="41">
-              <caret line="62" column="21" lean-forward="false" selection-start-line="62" selection-start-column="21" selection-end-line="62" selection-end-column="21" />
+            <state relative-caret-position="265">
+              <caret line="73" column="17" lean-forward="true" selection-start-line="73" selection-start-column="17" selection-end-line="73" selection-end-column="17" />
               <folding>
                 <element signature="e#588#599#0" expanded="true" />
               </folding>
@@ -43,11 +43,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="mcts.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="mcts.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mcts.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="156">
-              <caret line="219" column="59" lean-forward="false" selection-start-line="219" selection-start-column="59" selection-end-line="219" selection-end-column="59" />
+            <state relative-caret-position="544">
+              <caret line="55" column="12" lean-forward="false" selection-start-line="55" selection-start-column="4" selection-end-line="55" selection-end-column="12" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="go.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/go.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="7046">
+              <caret line="500" column="15" lean-forward="false" selection-start-line="500" selection-start-column="8" selection-end-line="500" selection-end-column="15" />
               <folding />
             </state>
           </provider>
@@ -56,8 +66,8 @@
       <file leaf-file-name="strategies.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/strategies.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1228">
-              <caret line="89" column="28" lean-forward="false" selection-start-line="89" selection-start-column="20" selection-end-line="89" selection-end-column="28" />
+            <state relative-caret-position="156">
+              <caret line="231" column="52" lean-forward="false" selection-start-line="231" selection-start-column="45" selection-end-line="231" selection-end-column="52" />
               <folding>
                 <element signature="e#604#613#0" expanded="true" />
               </folding>
@@ -130,12 +140,15 @@
       <find>MAX_GAMES_PER_GENERATION</find>
       <find>selfplay_cache_model</find>
       <find>BatchNorm2d</find>
-      <find>Found</find>
-      <find>should</find>
-      <find>is_done</find>
       <find>should_res</find>
       <find>self.Q</find>
       <find>root</find>
+      <find>should</find>
+      <find>Found</find>
+      <find>game_over</find>
+      <find>is_done</find>
+      <find>is_game</find>
+      <find>position</find>
     </findStrings>
   </component>
   <component name="IdeDocumentHistory">
@@ -147,8 +160,8 @@
         <option value="$PROJECT_DIR$/selfplay_worker.py" />
         <option value="$PROJECT_DIR$/selfplay_mcts.py" />
         <option value="$PROJECT_DIR$/dual_net.py" />
-        <option value="$PROJECT_DIR$/strategies.py" />
         <option value="$PROJECT_DIR$/mcts.py" />
+        <option value="$PROJECT_DIR$/strategies.py" />
       </list>
     </option>
   </component>
@@ -370,31 +383,39 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/selfplay_mcts.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="41">
-          <caret line="62" column="21" lean-forward="false" selection-start-line="62" selection-start-column="21" selection-end-line="62" selection-end-column="21" />
-          <folding>
-            <element signature="e#588#599#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/strategies.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1228">
-          <caret line="89" column="28" lean-forward="false" selection-start-line="89" selection-start-column="20" selection-end-line="89" selection-end-column="28" />
+        <state relative-caret-position="156">
+          <caret line="231" column="52" lean-forward="false" selection-start-line="231" selection-start-column="45" selection-end-line="231" selection-end-column="52" />
           <folding>
             <element signature="e#604#613#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/go.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="7046">
+          <caret line="500" column="15" lean-forward="false" selection-start-line="500" selection-start-column="8" selection-end-line="500" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/mcts.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="219" column="59" lean-forward="false" selection-start-line="219" selection-start-column="59" selection-end-line="219" selection-end-column="59" />
+        <state relative-caret-position="544">
+          <caret line="55" column="12" lean-forward="false" selection-start-line="55" selection-start-column="4" selection-end-line="55" selection-end-column="12" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/selfplay_mcts.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="265">
+          <caret line="73" column="17" lean-forward="true" selection-start-line="73" selection-start-column="17" selection-end-line="73" selection-end-column="17" />
+          <folding>
+            <element signature="e#588#599#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

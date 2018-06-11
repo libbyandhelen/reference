@@ -220,8 +220,8 @@ class MCTSNode(object):
         '''True if the last two moves were Pass or if the position is at a move
         greater than the max depth.
         '''
-        print("game over", self.position.is_game_over())
-        print("n", self.position.n)
+        # print("game over", self.position.is_game_over())
+        # print("n", self.position.n)
         return self.position.is_game_over() or self.position.n >= MAX_DEPTH
 
     def inject_noise(self):
