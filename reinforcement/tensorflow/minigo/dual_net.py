@@ -44,6 +44,7 @@ class DualNetwork():
             syms_used, processed = symmetries.randomize_symmetries_feat(
                 processed)
 
+        print(processed)
         probabilities, value = self.model(processed)
         if use_random_symmetry:
             probabilities = symmetries.invert_symmetries_pi(
