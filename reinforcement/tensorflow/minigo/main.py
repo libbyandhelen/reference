@@ -282,6 +282,7 @@ def selfplay_cache_model(
 
     # preprocessing.write_tf_examples(fname, tf_examples)
     preprocessing.write_dataset(fname, dataset)
+    print(os.listdir(output_dir))
     qmeas.stop_time('selfplay')
 
 
