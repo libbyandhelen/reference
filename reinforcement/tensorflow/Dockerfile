@@ -15,8 +15,8 @@ RUN apt-get install -y python-pip python3-pip virtualenv htop
 RUN pip3 install virtualenv
 RUN pip3 install virtualenvwrapper
 RUN pip3 install --upgrade numpy scipy sklearn
-pip3 install http://download.pytorch.org/whl/cu90/torch-0.4.0-cp36-cp36m-linux_x86_64.whl 
-pip3 install torchvision
+RUN pip3 install http://download.pytorch.org/whl/cu90/torch-0.4.0-cp36-cp36m-linux_x86_64.whl 
+RUN pip3 install torchvision
 #RUN pip3 install --upgrade numpy scipy sklearn tf-nightly-gpu
 # Mount data into the docker
 ADD . /research/reinforcement
