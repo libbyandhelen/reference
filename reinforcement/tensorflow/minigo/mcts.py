@@ -272,10 +272,10 @@ class MCTSNode(object):
         p_rel = p_delta / self.child_prior
         # Dump out some statistics
         output = []
-        try:
-            output.append("{q:.4f}\n".format(q=self.Q))
-        except:
-            output.append("{q:.4f}\n".format(q=self.Q[0]))
+        # try:
+        output.append("{q:.4f}\n".format(q=self.Q))
+        # except:
+        #     output.append("{q:.4f}\n".format(q=self.Q[0]))
         output.append(self.most_visited_path())
         output.append(
             "move:  action      Q      U      P    P-Dir    N  soft-N  p-delta  p-rel\n")
