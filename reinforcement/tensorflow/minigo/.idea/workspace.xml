@@ -14,8 +14,8 @@
       <file leaf-file-name="main.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-732">
-              <caret line="285" column="16" lean-forward="false" selection-start-line="285" selection-start-column="16" selection-end-line="285" selection-end-column="16" />
+            <state relative-caret-position="-402">
+              <caret line="219" column="30" lean-forward="false" selection-start-line="219" selection-start-column="17" selection-end-line="219" selection-end-column="30" />
               <folding />
             </state>
           </provider>
@@ -34,8 +34,8 @@
       <file leaf-file-name="selfplay_mcts.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/selfplay_mcts.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="73" column="17" lean-forward="true" selection-start-line="73" selection-start-column="17" selection-end-line="73" selection-end-column="17" />
+            <state relative-caret-position="578">
+              <caret line="53" column="5" lean-forward="false" selection-start-line="53" selection-start-column="5" selection-end-line="53" selection-end-column="5" />
               <folding>
                 <element signature="e#588#599#0" expanded="true" />
               </folding>
@@ -46,7 +46,7 @@
       <file leaf-file-name="mcts.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mcts.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-732">
+            <state relative-caret-position="145">
               <caret line="224" column="28" lean-forward="true" selection-start-line="224" selection-start-column="28" selection-end-line="224" selection-end-column="28" />
               <folding />
             </state>
@@ -75,11 +75,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="loop_selfplay.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="loop_selfplay.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/loop_selfplay.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="124" column="8" lean-forward="false" selection-start-line="124" selection-start-column="8" selection-end-line="124" selection-end-column="8" />
+            <state relative-caret-position="225">
+              <caret line="140" column="49" lean-forward="false" selection-start-line="140" selection-start-column="28" selection-end-line="140" selection-end-column="49" />
               <folding />
             </state>
           </provider>
@@ -88,32 +88,30 @@
       <file leaf-file-name="selfplay_worker.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/selfplay_worker.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1424">
-              <caret line="145" column="86" lean-forward="false" selection-start-line="145" selection-start-column="86" selection-end-line="145" selection-end-column="86" />
+            <state relative-caret-position="268">
+              <caret line="248" column="0" lean-forward="false" selection-start-line="248" selection-start-column="0" selection-end-line="248" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dual_net.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dual_net.py">
+      <file leaf-file-name="final.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/params/final.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="59" column="26" lean-forward="false" selection-start-line="59" selection-start-column="26" selection-end-line="59" selection-end-column="26" />
-              <folding>
-                <element signature="e#0#11#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="15">
+              <caret line="1" column="30" lean-forward="false" selection-start-line="1" selection-start-column="30" selection-end-line="1" selection-end-column="30" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dual_net2.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dual_net2.py">
+      <file leaf-file-name="goparams.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/goparams.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="274">
-              <caret line="299" column="30" lean-forward="true" selection-start-line="299" selection-start-column="30" selection-end-line="299" selection-end-column="30" />
+            <state relative-caret-position="230">
+              <caret line="24" column="26" lean-forward="true" selection-start-line="24" selection-start-column="26" selection-end-line="24" selection-end-column="26" />
               <folding>
-                <element signature="e#771#789#0" expanded="true" />
+                <element signature="e#157#195#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -137,17 +135,21 @@
       <find>Q</find>
       <find>w</find>
       <find>self.W</find>
-      <find>MAX_GAMES_PER_GENERATION</find>
       <find>BatchNorm2d</find>
       <find>should_res</find>
       <find>self.Q</find>
       <find>root</find>
       <find>should</find>
-      <find>Found</find>
       <find>game_over</find>
       <find>position</find>
+      <find>Found</find>
+      <find>cache</find>
+      <find>NUM_PARALLEL_SELFPLAY</find>
       <find>is_game</find>
       <find>is_done</find>
+      <find>selfplay_mcts</find>
+      <find>SELFPLAY_DIR</find>
+      <find>MAX_GAMES_PER_GENERATION</find>
       <find>selfplay_cache_model</find>
     </findStrings>
   </component>
@@ -156,12 +158,14 @@
       <list>
         <option value="$PROJECT_DIR$/requirements.txt" />
         <option value="$PROJECT_DIR$/dual_net2.py" />
-        <option value="$PROJECT_DIR$/main.py" />
-        <option value="$PROJECT_DIR$/selfplay_worker.py" />
         <option value="$PROJECT_DIR$/selfplay_mcts.py" />
         <option value="$PROJECT_DIR$/dual_net.py" />
         <option value="$PROJECT_DIR$/strategies.py" />
         <option value="$PROJECT_DIR$/mcts.py" />
+        <option value="$PROJECT_DIR$/main.py" />
+        <option value="$PROJECT_DIR$/goparams.py" />
+        <option value="$PROJECT_DIR$/selfplay_worker.py" />
+        <option value="$PROJECT_DIR$/params/final.json" />
       </list>
     </option>
   </component>
@@ -198,6 +202,11 @@
             <path>
               <item name="minigo" type="b2602c69:ProjectViewProjectNode" />
               <item name="minigo" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="minigo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="minigo" type="462c0819:PsiDirectoryNode" />
+              <item name="params" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -333,28 +342,33 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/goparams.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="141">
-          <caret line="41" column="30" lean-forward="false" selection-start-line="41" selection-start-column="6" selection-end-line="41" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dual_net.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="59" column="26" lean-forward="false" selection-start-line="59" selection-start-column="26" selection-end-line="59" selection-end-column="26" />
+        <state relative-caret-position="420">
+          <caret line="62" column="26" lean-forward="false" selection-start-line="62" selection-start-column="26" selection-end-line="62" selection-end-column="26" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
+            <marker date="1528756365000" expanded="true" signature="272:776" ph="..." />
+            <marker date="1528756365000" expanded="true" signature="726:776" ph="..." />
+            <marker date="1528756365000" expanded="true" signature="4848:4967" ph="..." />
+            <marker date="1528756365000" expanded="true" signature="5359:5931" ph="..." />
+            <marker date="1528756365000" expanded="true" signature="5975:6949" ph="..." />
+            <marker date="1528756365000" expanded="true" signature="5980:6527" ph="&quot;&quot;&quot;...&quot;&quot;&quot;" />
+            <marker date="1528756365000" expanded="true" signature="6609:6897" ph="..." />
+            <marker date="1528756365000" expanded="true" signature="6979:7115" ph="..." />
+            <marker date="1528756365000" expanded="true" signature="6984:7072" ph="&quot;&quot;&quot;...&quot;&quot;&quot;" />
+            <marker date="1528756365000" expanded="true" signature="7180:8410" ph="..." />
+            <marker date="1528756365000" expanded="true" signature="7589:8410" ph="..." />
+            <marker date="1528756365000" expanded="true" signature="7653:8358" ph="..." />
+            <marker date="1528756365000" expanded="true" signature="8451:8789" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/go.py">
+    <entry file="file://$PROJECT_DIR$/preprocessing.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="7046">
-          <caret line="500" column="15" lean-forward="false" selection-start-line="500" selection-start-column="8" selection-end-line="500" selection-end-column="15" />
+        <state relative-caret-position="150">
+          <caret line="88" column="4" lean-forward="false" selection-start-line="88" selection-start-column="4" selection-end-line="88" selection-end-column="4" />
           <folding />
         </state>
       </provider>
@@ -369,53 +383,71 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mcts.py">
+    <entry file="file://$PROJECT_DIR$/go.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-732">
-          <caret line="224" column="28" lean-forward="true" selection-start-line="224" selection-start-column="28" selection-end-line="224" selection-end-column="28" />
+        <state relative-caret-position="7046">
+          <caret line="500" column="15" lean-forward="false" selection-start-line="500" selection-start-column="8" selection-end-line="500" selection-end-column="15" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.py">
+    <entry file="file://$PROJECT_DIR$/mcts.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-732">
-          <caret line="285" column="16" lean-forward="false" selection-start-line="285" selection-start-column="16" selection-end-line="285" selection-end-column="16" />
+        <state relative-caret-position="145">
+          <caret line="224" column="28" lean-forward="true" selection-start-line="224" selection-start-column="28" selection-end-line="224" selection-end-column="28" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/selfplay_mcts.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="73" column="17" lean-forward="true" selection-start-line="73" selection-start-column="17" selection-end-line="73" selection-end-column="17" />
+        <state relative-caret-position="578">
+          <caret line="53" column="5" lean-forward="false" selection-start-line="53" selection-start-column="5" selection-end-line="53" selection-end-column="5" />
           <folding>
             <element signature="e#588#599#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/preprocessing.py">
+    <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="88" column="4" lean-forward="false" selection-start-line="88" selection-start-column="4" selection-end-line="88" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/selfplay_worker.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1424">
-          <caret line="145" column="86" lean-forward="false" selection-start-line="145" selection-start-column="86" selection-end-line="145" selection-end-column="86" />
+        <state relative-caret-position="-402">
+          <caret line="219" column="30" lean-forward="false" selection-start-line="219" selection-start-column="17" selection-end-line="219" selection-end-column="30" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/loop_selfplay.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="124" column="8" lean-forward="false" selection-start-line="124" selection-start-column="8" selection-end-line="124" selection-end-column="8" />
+        <state relative-caret-position="225">
+          <caret line="140" column="49" lean-forward="false" selection-start-line="140" selection-start-column="28" selection-end-line="140" selection-end-column="49" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/selfplay_worker.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="268">
+          <caret line="248" column="0" lean-forward="false" selection-start-line="248" selection-start-column="0" selection-end-line="248" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/params/final.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="30" lean-forward="false" selection-start-line="1" selection-start-column="30" selection-end-line="1" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/goparams.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="24" column="26" lean-forward="true" selection-start-line="24" selection-start-column="26" selection-end-line="24" selection-end-column="26" />
+          <folding>
+            <element signature="e#157#195#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
