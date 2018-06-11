@@ -51,6 +51,7 @@ class DualNetwork():
         processed = torch.from_numpy(processed)
         probabilities, value, logits = self.model(processed.float())
         probabilities = probabilities.detach().numpy()
+        value = value.detach().numpy()
         if use_random_symmetry:
             probabilities = symmetries.invert_symmetries_pi(
                 syms_used, probabilities)
