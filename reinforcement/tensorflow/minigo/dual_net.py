@@ -132,7 +132,7 @@ class Model(nn.Module):
                 padding=0,
             ),
             nn.BatchNorm2d(
-                num_features=2,
+                num_features=1,
                 eps=1e-5,
                 momentum=.997,
             ),
