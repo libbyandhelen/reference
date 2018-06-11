@@ -2,6 +2,8 @@ import math
 import shutil
 
 import os
+
+import numpy as np
 import torch
 from torch import nn
 from torch.autograd import Variable
@@ -44,7 +46,9 @@ class DualNetwork():
             syms_used, processed = symmetries.randomize_symmetries_feat(
                 processed)
 
-        print(processed)
+        processed = np.array(processed)
+        print(processed.shape)
+        processed = torch.from_numpy(processed)
         probabilities, value = self.model(processed)
         if use_random_symmetry:
             probabilities = symmetries.invert_symmetries_pi(
