@@ -328,13 +328,10 @@ def gather(
         #         output_record, example_batch, serialize=False)
         loader = preprocessing.shuffle_examples(examples_per_record,record_files)
         for i, (feature, pi, outcome) in enumerate(tqdm(loader)):
-            print(type(feature))
-            print(type(pi))
-            print(type(outcome))
             torch_dataset = Data.TensorDataset(
                 feature,
-                torch.from_numpy(pi),
-                torch.from_numpy(outcome),
+                pi,
+                outcome,
             )
             output_record = os.path.join(output_directory, '{}-{}.tfrecord.zz'.format(model_name, str(i)))
             preprocessing.write_dataset(output_record, torch_dataset)
