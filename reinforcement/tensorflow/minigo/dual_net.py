@@ -47,6 +47,7 @@ class DualNetwork():
                 processed)
 
         processed = np.array(processed)
+        processed = np.moveaxis(processed, -1, 1)
         print(processed.shape)
         processed = torch.from_numpy(processed)
         probabilities, value = self.model(processed)
