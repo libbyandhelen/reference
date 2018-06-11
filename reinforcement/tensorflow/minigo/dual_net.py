@@ -238,7 +238,7 @@ def train(working_dir, tf_records, generation_num, **hparams):
             print(features.shape)
             features = Variable(features.float())
             pi = Variable(pi.float())
-            outcome = Variable(outcome.float())
+            outcome = Variable(outcome.long())
 
             policy_output, value_output, logits = model(features)
 
