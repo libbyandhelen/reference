@@ -222,7 +222,7 @@ def _round_power_of_two(n):
 def train(working_dir, tf_records, generation_num, **hparams):
     assert generation_num > 0, "Model 0 is random weights"
     hparams = get_default_hyperparams(**hparams)
-    model = Model(hparams).coda()
+    model = Model(hparams).cuda()
 
     loader = preprocessing.get_input_tensors(TRAIN_BATCH_SIZE, tf_records)
     optimizer = torch.optim.SGD(
