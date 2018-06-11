@@ -12,7 +12,7 @@ ENV PYENV_ROOT $HOME/.pyenv
 ENV PATH $PYENV_ROOT/shims:$PYENV_ROOT/bin:$PATH
 RUN apt-get install -y python-setuptools
 RUN apt-get install -y python-pip python3-pip virtualenv htop
-RUN pip3 —version
+RUN pip3 —-version
 RUN pip3 install virtualenv
 RUN pip3 install virtualenvwrapper
 RUN pip3 install --upgrade numpy scipy sklearn
