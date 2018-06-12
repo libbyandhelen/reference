@@ -85,7 +85,7 @@ def get_models():
     Returns: [(13, 000013-modelname), (17, 000017-modelname), ...etc]
     """
     # all_models = gfile.Glob(os.path.join(MODELS_DIR, '*.meta'))
-    all_models = glob.glob(os.path.join(MODELS_DIR, '*.meta'))
+    all_models = glob.glob(os.path.join(MODELS_DIR, '*'))
     model_filenames = [os.path.basename(m) for m in all_models]
     model_numbers_names = sorted([
         (shipname.detect_model_num(m), shipname.detect_model_name(m))

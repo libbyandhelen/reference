@@ -84,7 +84,8 @@ def get_models():
     sorted increasing.
     Returns: [(13, 000013-modelname), (17, 000017-modelname), ...etc]
     """
-    all_models = glob.glob(os.path.join(MODELS_DIR, '*.meta'))
+    # all_models = glob.glob(os.path.join(MODELS_DIR, '*.meta'))
+    all_models = glob.glob(os.path.join(MODELS_DIR, '*'))
     model_filenames = [os.path.basename(m) for m in all_models]
     model_numbers_names = sorted([
         (shipname.detect_model_num(m), shipname.detect_model_name(m))
@@ -177,7 +178,7 @@ def bury_latest_model():
   prev_save_file = os.path.join(MODELS_DIR, prev_model_name)
 
   # suffixes = ['.data-00000-of-00001', '.index', '.meta']
-  suffixes = ['.model']
+  suffixes = ['']
   new_name = '{:06d}-continue'.format(model_num)
   new_save_file = os.path.join(MODELS_DIR, new_name)
 
