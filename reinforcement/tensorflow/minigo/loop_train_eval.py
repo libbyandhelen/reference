@@ -157,6 +157,7 @@ def train():
 
 def bury_latest_model():
   print("hahaha")
+  print(os.listdir(MODELS_DIR))
   main._ensure_dir_exists(BURY_DIR)
   main._ensure_dir_exists(BURY_SELFPLAY_DIR)
   model_num, model_name = get_latest_model()
