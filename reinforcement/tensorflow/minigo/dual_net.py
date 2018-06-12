@@ -237,7 +237,7 @@ def train(working_dir, tf_records, generation_num, **hparams):
         weight_decay=hparams['l2_strength'],
     )
 
-    # scheduler = torch.optim.lr_scheduler.StepLR(optimizer, step_size=30, gamma=0.1)
+    scheduler = torch.optim.lr_scheduler.StepLR(optimizer, step_size=2, gamma=0.1)
 
     now = datetime.datetime.now()
     model_name = now.strftime("%Y-%m-%d %H:%M:%S").split(" ")
@@ -267,7 +267,6 @@ def train(working_dir, tf_records, generation_num, **hparams):
             optimizer.zero_grad()
             combined_cost.backward()
 
-            scheduler = torch.optim.lr_scheduler.StepLR(optimizer, step_size=30, gamma=0.1)
             scheduler.step()
 
             print("epoch: %s | step: %s | loss: %s" % (epoch, step, combined_cost.data[0]))
