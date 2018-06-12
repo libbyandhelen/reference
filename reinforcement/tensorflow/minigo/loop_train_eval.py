@@ -86,6 +86,7 @@ def get_models():
     """
     # all_models = glob.glob(os.path.join(MODELS_DIR, '*.meta'))
     all_models = glob.glob(MODELS_DIR)
+    print("all_models", all_models)
     model_filenames = [os.path.basename(m) for m in all_models]
     model_numbers_names = sorted([
         (shipname.detect_model_num(m), shipname.detect_model_name(m))
@@ -100,6 +101,7 @@ def get_latest_model():
     models = get_models()
     if len(models) == 0:
         models = [(0, '000000-bootstrap')]
+    print(models)
     return models[-1]
 
 
