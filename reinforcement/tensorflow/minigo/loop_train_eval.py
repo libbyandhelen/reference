@@ -129,7 +129,8 @@ def evaluate(prev_model, cur_model, readouts=200, verbose=1, resign_threshold=0.
       qmeas.record('evaluate_choice', 'old')
       keep = False
     qmeas.record('eval_summary', {'win_pct': cur_win_pct, 'model': cur_model, 'keep': keep})
-    return keep
+    # return keep
+    return False
 
 
 def gather():
@@ -173,7 +174,8 @@ def bury_latest_model():
   prev_num, prev_model_name = get_latest_model()
   prev_save_file = os.path.join(MODELS_DIR, prev_model_name)
 
-  suffixes = ['.data-00000-of-00001', '.index', '.meta']
+  # suffixes = ['.data-00000-of-00001', '.index', '.meta']
+  suffixes = ['.model']
   new_name = '{:06d}-continue'.format(model_num)
   new_save_file = os.path.join(MODELS_DIR, new_name)
 
