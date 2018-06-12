@@ -256,7 +256,7 @@ def train(working_dir, tf_records, generation_num, **hparams):
             optimizer.step()
 
             print("epoch: %s | step: %s | loss: %s" % (epoch, step, combined_cost.data[0]))
-        torch.save(model.state_dict(), working_dir)
+        torch.save(model.state_dict(), os.path.join(working_dir, "model"))
 
 
 def bootstrap(working_dir, **hparams):
