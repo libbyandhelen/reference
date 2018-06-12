@@ -242,7 +242,7 @@ def make_dataset_from_selfplay(data_extracts):
     torch_dataset = Data.TensorDataset(
         torch.from_numpy(np.array(features)),
         torch.from_numpy(np.array(pis)),
-        torch.from_numpy(np.array(features)),
+        torch.from_numpy(np.array(results)),
     )
     return torch_dataset
 

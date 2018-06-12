@@ -3,6 +3,7 @@ import shutil
 
 import os
 
+import datetime
 import numpy as np
 import torch
 from torch import nn
@@ -231,21 +232,24 @@ def train(working_dir, tf_records, generation_num, **hparams):
         momentum=hparams['momentum'],
         weight_decay=hparams['l2_strength'],
     )
-
+    now = datetime.datetime.now()
+    model_name = now.strftime("%Y-%m-%d %H:%M:%S").split(" ")
+    model_name = "-".join(model_name)+".model"
     for epoch in range(10):
         for step, (features, pi, outcome) in enumerate(loader):
             features = features.permute(0, 3, 1, 2)
             features = Variable(features.float())
             pi = Variable(pi.float())
-            outcome = Variable(outcome.long())
+            outcome = Variable(outcome)
 
             policy_output, value_output, logits = model(features)
 
             loss = nn.CrossEntropyLoss()
-            print(logits.shape)
-            print(pi.shape)
+            pi = torch.max(pi, 1)[1]
             policy_cost = torch.mean(loss(logits.float().cuda(), pi.long().cuda()))
-            value_cost = torch.mean((value_output - outcome)**2)
+            print(value_output.shape)
+            print(outcome.shape)
+            value_cost = torch.mean((value_output.float().cuda() - outcome.float().cuda())**2)
 
             combined_cost = policy_cost + value_cost
             policy_entropy = -torch.mean(torch.sum(policy_output * torch.log(policy_output), dim=0))
@@ -254,8 +258,9 @@ def train(working_dir, tf_records, generation_num, **hparams):
             combined_cost.backward()
             optimizer.step()
 
-            print("epoch: %s | step: %s | loss: %s" % (epoch, step, loss.data[0]))
-        torch.save(model.state_dict(), working_dir)
+            print("epoch: %s | step: %s | loss: %s" % (epoch, step, combined_cost.data[0]))
+        torch.save(model.state_dict(), os.path.join(working_dir, model_name))
+    return model_name
 
 
 def bootstrap(working_dir, **hparams):
