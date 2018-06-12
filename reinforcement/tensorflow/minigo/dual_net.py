@@ -226,12 +226,19 @@ def train(working_dir, tf_records, generation_num, **hparams):
     model = Model(hparams).cuda()
 
     loader = preprocessing.get_input_tensors(TRAIN_BATCH_SIZE, tf_records)
+
+    # boundaries = [int(1e6), int(2e6)]
+    # values = [1e-2, 1e-3, 1e-4]
+
     optimizer = torch.optim.SGD(
         model.parameters(),
         lr=1.5e-6,
         momentum=hparams['momentum'],
         weight_decay=hparams['l2_strength'],
     )
+
+    # scheduler = torch.optim.lr_scheduler.StepLR(optimizer, step_size=30, gamma=0.1)
+
     now = datetime.datetime.now()
     model_name = now.strftime("%Y-%m-%d %H:%M:%S").split(" ")
     model_name = "-".join(model_name)+".model"
@@ -256,7 +263,9 @@ def train(working_dir, tf_records, generation_num, **hparams):
 
             optimizer.zero_grad()
             combined_cost.backward()
-            optimizer.step()
+
+            scheduler = torch.optim.lr_scheduler.StepLR(optimizer, step_size=30, gamma=0.1)
+            scheduler.step()
 
             print("epoch: %s | step: %s | loss: %s" % (epoch, step, combined_cost.data[0]))
         torch.save(model.state_dict(), os.path.join(working_dir, model_name))
