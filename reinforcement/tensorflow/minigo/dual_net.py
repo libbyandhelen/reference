@@ -25,9 +25,6 @@ class DualNetwork():
         self.hparams = get_default_hyperparams(**hparams)
         self.inference_input = None
         self.inference_output = None
-        # config = tf.ConfigProto()
-        # config.gpu_options.allow_growth = True
-        # self.sess = tf.Session(graph=tf.Graph(), config=config)
         self.model = None
         self.initialize_graph()
 
@@ -174,20 +171,6 @@ class Model(nn.Module):
 
         return policy_output, value_output, logits
 
-        # # train ops
-        # loss = nn.CrossEntropyLoss()
-        # policy_cost = torch.mean(loss(logits, labels['pi_tensor']))
-        # value_cost = torch.mean((value_output - labels['value_tensor'])**2)
-        #
-        # combined_cost = policy_cost + value_cost
-        # policy_entropy = -torch.mean(torch.sum(policy_output * torch.log(policy_output), dim=0))
-        # opimizer = torch.optim.SGD(
-        #     model.parameters(),
-        #     lr=1.5e-6,
-        #     momentum=self.params['momentum'],
-        #     weight_decay=self.params['l2_strength'],
-        # )
-
 
 def get_default_hyperparams(**overrides):
     """Returns the hyperparams for the neural net.
@@ -237,12 +220,13 @@ def train(working_dir, tf_records, generation_num, **hparams):
         weight_decay=hparams['l2_strength'],
     )
 
-    scheduler = torch.optim.lr_scheduler.StepLR(optimizer, step_size=2, gamma=0.1)
+    scheduler = torch.optim.lr_scheduler.StepLR(optimizer, step_size=30, gamma=0.1)
 
     now = datetime.datetime.now()
     model_name = now.strftime("%Y-%m-%d %H:%M:%S").split(" ")
     model_name = "-".join(model_name)+".model"
-    for epoch in range(10):
+    combined_cost = None
+    for epoch in range(100):
         for step, (features, pi, outcome) in enumerate(loader):
             features = features.permute(0, 3, 1, 2)
             features = Variable(features.float())
@@ -254,8 +238,6 @@ def train(working_dir, tf_records, generation_num, **hparams):
             loss = nn.CrossEntropyLoss()
             pi = torch.max(pi, 1)[1]
             policy_cost = torch.mean(loss(logits.float().cuda(), pi.long().cuda()))
-            print(value_output.shape)
-            print(outcome.shape)
             value_cost = torch.mean((value_output.float().cuda() - outcome.float().cuda())**2)
 
             combined_cost = policy_cost + value_cost
@@ -263,10 +245,9 @@ def train(working_dir, tf_records, generation_num, **hparams):
 
             optimizer.zero_grad()
             combined_cost.backward()
-
             scheduler.step()
 
-            print("epoch: %s | step: %s | loss: %s" % (epoch, step, combined_cost.data[0]))
+        print("epoch: %s | loss: %s" % (epoch, combined_cost.data[0]))
         torch.save(model.state_dict(), os.path.join(working_dir, model_name))
     return model_name
 
@@ -275,7 +256,6 @@ def bootstrap(working_dir, **hparams):
     hparams = get_default_hyperparams(**hparams)
 
     estimator_initial_checkpoint_name = 'model.ckpt-1'
-    print("working_dir", working_dir)
     save_file = os.path.join(working_dir, estimator_initial_checkpoint_name)
     model = Model(hparams)
     torch.save(model.state_dict(), save_file)
@@ -284,5 +264,3 @@ def bootstrap(working_dir, **hparams):
 
 def export_model(working_dir, model_name, model_path):
     shutil.copy2(os.path.join(working_dir, model_name), model_path)
-    print("model_name", model_name)
-    print("model_path", model_path)

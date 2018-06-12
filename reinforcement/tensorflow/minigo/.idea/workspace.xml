@@ -21,16 +21,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="evaluation.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/evaluation.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="116">
-              <caret line="26" column="9" lean-forward="false" selection-start-line="26" selection-start-column="9" selection-end-line="26" selection-end-column="9" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="selfplay_mcts.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/selfplay_mcts.py">
           <provider selected="true" editor-type-id="text-editor">
@@ -53,22 +43,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dual_net2.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dual_net2.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="290" column="75" lean-forward="true" selection-start-line="290" selection-start-column="75" selection-end-line="290" selection-end-column="75" />
-              <folding>
-                <element signature="e#771#789#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="selfplay_worker.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/selfplay_worker.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="188">
+            <state relative-caret-position="-403">
               <caret line="107" column="0" lean-forward="true" selection-start-line="107" selection-start-column="0" selection-end-line="107" selection-end-column="0" />
               <folding>
                 <element signature="e#724#735#0" expanded="true" />
@@ -77,11 +55,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="loop_train_eval.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="preprocessing.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/preprocessing.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1320">
+              <caret line="103" column="0" lean-forward="false" selection-start-line="103" selection-start-column="0" selection-end-line="103" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="loop_train_eval.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/loop_train_eval.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="154">
-              <caret line="166" column="47" lean-forward="false" selection-start-line="166" selection-start-column="39" selection-end-line="166" selection-end-column="47" />
+            <state relative-caret-position="299">
+              <caret line="183" column="19" lean-forward="true" selection-start-line="183" selection-start-column="19" selection-end-line="183" selection-end-column="19" />
               <folding />
             </state>
           </provider>
@@ -109,11 +97,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="final.json" pinned="false" current-in-tab="false">
+      <file leaf-file-name="final.json" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/params/final.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" column="24" lean-forward="false" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
+            <state relative-caret-position="180">
+              <caret line="12" column="33" lean-forward="true" selection-start-line="12" selection-start-column="33" selection-end-line="12" selection-end-column="33" />
               <folding />
             </state>
           </provider>
@@ -130,7 +118,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>BatchNorm2d</find>
       <find>should_res</find>
       <find>self.Q</find>
       <find>root</find>
@@ -152,14 +139,15 @@
       <find>predict_games.</find>
       <find>cuda</find>
       <find>bury_latest_model</find>
-      <find>export_model</find>
       <find>meta</find>
-      <find>selfplay_cache_model</find>
-      <find>MAX_GAMES_PER_GENERATION</find>
       <find>.model</find>
       <find>Bury CMD</find>
       <find>bury_model</find>
+      <find>continue</find>
+      <find>selfplay_cache_model</find>
       <find>bury</find>
+      <find>export_model</find>
+      <find>MAX_GAMES_PER_GENERATION</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$</dir>
@@ -175,12 +163,12 @@
         <option value="$PROJECT_DIR$/mcts.py" />
         <option value="$PROJECT_DIR$/goparams.py" />
         <option value="$PROJECT_DIR$/selfplay_worker.py" />
-        <option value="$PROJECT_DIR$/preprocessing.py" />
         <option value="$PROJECT_DIR$/main.py" />
         <option value="$PROJECT_DIR$/params/final.json" />
         <option value="$PROJECT_DIR$/dual_net.py" />
         <option value="$PROJECT_DIR$/loop_selfplay.py" />
         <option value="$PROJECT_DIR$/loop_train_eval.py" />
+        <option value="$PROJECT_DIR$/preprocessing.py" />
       </list>
     </option>
   </component>
@@ -383,14 +371,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/preprocessing.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="269">
-          <caret line="244" column="44" lean-forward="true" selection-start-line="244" selection-start-column="44" selection-end-line="244" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/evaluation.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="116">
@@ -403,14 +383,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-646">
           <caret line="70" column="29" lean-forward="false" selection-start-line="70" selection-start-column="20" selection-end-line="70" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/params/final.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="24" lean-forward="false" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
           <folding />
         </state>
       </provider>
@@ -443,16 +415,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/selfplay_worker.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="188">
-          <caret line="107" column="0" lean-forward="true" selection-start-line="107" selection-start-column="0" selection-end-line="107" selection-end-column="0" />
-          <folding>
-            <element signature="e#724#735#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/loop_selfplay.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="193">
@@ -461,20 +423,44 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dual_net2.py">
+    <entry file="file://$PROJECT_DIR$/selfplay_worker.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="290" column="75" lean-forward="true" selection-start-line="290" selection-start-column="75" selection-end-line="290" selection-end-column="75" />
+        <state relative-caret-position="-403">
+          <caret line="107" column="0" lean-forward="true" selection-start-line="107" selection-start-column="0" selection-end-line="107" selection-end-column="0" />
           <folding>
-            <element signature="e#771#789#0" expanded="true" />
+            <element signature="e#724#735#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/loop_train_eval.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="166" column="47" lean-forward="false" selection-start-line="166" selection-start-column="39" selection-end-line="166" selection-end-column="47" />
+        <state relative-caret-position="299">
+          <caret line="183" column="19" lean-forward="true" selection-start-line="183" selection-start-column="19" selection-end-line="183" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/preprocessing.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1320">
+          <caret line="103" column="0" lean-forward="false" selection-start-line="103" selection-start-column="0" selection-end-line="103" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dual_net2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4350">
+          <caret line="290" column="75" lean-forward="true" selection-start-line="290" selection-start-column="75" selection-end-line="290" selection-end-column="75" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/params/final.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="33" lean-forward="true" selection-start-line="12" selection-start-column="33" selection-end-line="12" selection-end-column="33" />
           <folding />
         </state>
       </provider>
