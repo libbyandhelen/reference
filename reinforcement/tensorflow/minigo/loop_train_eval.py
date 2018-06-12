@@ -130,7 +130,7 @@ def evaluate(prev_model, cur_model, readouts=200, verbose=1, resign_threshold=0.
       keep = False
     qmeas.record('eval_summary', {'win_pct': cur_win_pct, 'model': cur_model, 'keep': keep})
     # return keep
-    return True
+    return False
 
 
 def gather():
@@ -156,6 +156,7 @@ def train():
 
 
 def bury_latest_model():
+  print("hahaha")
   main._ensure_dir_exists(BURY_DIR)
   main._ensure_dir_exists(BURY_SELFPLAY_DIR)
   model_num, model_name = get_latest_model()

@@ -244,9 +244,6 @@ def train(working_dir, tf_records, generation_num, **hparams):
     model_name = "-".join(model_name)+".model"
     for epoch in range(10):
         for step, (features, pi, outcome) in enumerate(loader):
-            for param_group in optimizer.param_groups:
-                print("learning rate", param_group['lr'])
-
             features = features.permute(0, 3, 1, 2)
             features = Variable(features.float())
             pi = Variable(pi.float())
