@@ -63,11 +63,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="loop_train_eval.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="loop_train_eval.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/loop_train_eval.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1070">
-              <caret line="265" column="31" lean-forward="true" selection-start-line="265" selection-start-column="31" selection-end-line="265" selection-end-column="31" />
+            <state relative-caret-position="320">
+              <caret line="215" column="14" lean-forward="true" selection-start-line="215" selection-start-column="14" selection-end-line="215" selection-end-column="14" />
               <folding />
             </state>
           </provider>
@@ -83,11 +83,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dual_net.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="dual_net.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/dual_net.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="303">
-              <caret line="277" column="20" lean-forward="false" selection-start-line="277" selection-start-column="20" selection-end-line="277" selection-end-column="20" />
+            <state relative-caret-position="101">
+              <caret line="247" column="16" lean-forward="false" selection-start-line="247" selection-start-column="16" selection-end-line="247" selection-end-column="16" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
@@ -153,9 +153,9 @@
       <find>predict_games</find>
       <find>export_model</find>
       <find>cuda</find>
-      <find>predict_games.</find>
       <find>RA</find>
       <find>EVAL_GAMES_PER_SIDE</find>
+      <find>predict_games.</find>
     </findStrings>
   </component>
   <component name="IdeDocumentHistory">
@@ -169,10 +169,10 @@
         <option value="$PROJECT_DIR$/goparams.py" />
         <option value="$PROJECT_DIR$/selfplay_worker.py" />
         <option value="$PROJECT_DIR$/preprocessing.py" />
-        <option value="$PROJECT_DIR$/dual_net.py" />
         <option value="$PROJECT_DIR$/main.py" />
         <option value="$PROJECT_DIR$/params/final.json" />
         <option value="$PROJECT_DIR$/loop_train_eval.py" />
+        <option value="$PROJECT_DIR$/dual_net.py" />
       </list>
     </option>
   </component>
@@ -435,16 +435,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dual_net.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="303">
-          <caret line="277" column="20" lean-forward="false" selection-start-line="277" selection-start-column="20" selection-end-line="277" selection-end-column="20" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/predict_games.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-646">
@@ -463,9 +453,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/loop_train_eval.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1070">
-          <caret line="265" column="31" lean-forward="true" selection-start-line="265" selection-start-column="31" selection-end-line="265" selection-end-column="31" />
+        <state relative-caret-position="320">
+          <caret line="215" column="14" lean-forward="true" selection-start-line="215" selection-start-column="14" selection-end-line="215" selection-end-column="14" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dual_net.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="101">
+          <caret line="247" column="16" lean-forward="false" selection-start-line="247" selection-start-column="16" selection-end-line="247" selection-end-column="16" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
