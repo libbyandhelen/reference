@@ -3,6 +3,7 @@ import shutil
 
 import os
 
+import datetime
 import numpy as np
 import torch
 from torch import nn
@@ -231,7 +232,9 @@ def train(working_dir, tf_records, generation_num, **hparams):
         momentum=hparams['momentum'],
         weight_decay=hparams['l2_strength'],
     )
-
+    now = datetime.datetime.now()
+    model_name = now.strftime("%Y-%m-%d %H:%M:%S").split(" ")
+    model_name = "-".join(model_name)+".model"
     for epoch in range(10):
         for step, (features, pi, outcome) in enumerate(loader):
             features = features.permute(0, 3, 1, 2)
@@ -256,7 +259,8 @@ def train(working_dir, tf_records, generation_num, **hparams):
             optimizer.step()
 
             print("epoch: %s | step: %s | loss: %s" % (epoch, step, combined_cost.data[0]))
-        torch.save(model.state_dict(), os.path.join(working_dir, "model"))
+        torch.save(model.state_dict(), os.path.join(working_dir, model_name))
+    return model_name
 
 
 def bootstrap(working_dir, **hparams):

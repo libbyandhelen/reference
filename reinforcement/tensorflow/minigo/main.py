@@ -120,8 +120,8 @@ def train(
     print("Training from:", tf_records[0], "to", tf_records[-1])
 
     with timer("Training"):
-        dual_net.train(working_dir, tf_records, generation_num)
-        dual_net.export_model(working_dir, model_save_path)
+        model_name = dual_net.train(working_dir, tf_records, generation_num)
+        dual_net.export_model(working_dir, model_name, model_save_path)
     qmeas.stop_time('train')
 
 
