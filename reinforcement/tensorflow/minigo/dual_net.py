@@ -255,7 +255,7 @@ def train(working_dir, tf_records, generation_num, **hparams):
             combined_cost.backward()
             optimizer.step()
 
-            print("epoch: %s | step: %s | loss: %s" % (epoch, step, loss.data[0]))
+            print("epoch: %s | step: %s | loss: %s" % (epoch, step, loss))
         torch.save(model.state_dict(), working_dir)
 
 
