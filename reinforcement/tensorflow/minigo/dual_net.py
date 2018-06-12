@@ -284,4 +284,5 @@ def bootstrap(working_dir, **hparams):
 
 def export_model(working_dir, model_name, model_path):
     shutil.copy2(os.path.join(working_dir, model_name), model_path)
+    print("model_name", model_name)
     print("model_path", model_path)
