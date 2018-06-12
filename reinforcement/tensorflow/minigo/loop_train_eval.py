@@ -130,7 +130,7 @@ def evaluate(prev_model, cur_model, readouts=200, verbose=1, resign_threshold=0.
       keep = False
     qmeas.record('eval_summary', {'win_pct': cur_win_pct, 'model': cur_model, 'keep': keep})
     # return keep
-    return False
+    return True
 
 
 def gather():
