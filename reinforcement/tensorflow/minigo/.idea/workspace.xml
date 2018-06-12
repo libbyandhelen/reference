@@ -86,8 +86,8 @@
       <file leaf-file-name="dual_net.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/dual_net.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="259">
-              <caret line="248" column="32" lean-forward="true" selection-start-line="248" selection-start-column="32" selection-end-line="248" selection-end-column="32" />
+            <state relative-caret-position="244">
+              <caret line="247" column="81" lean-forward="false" selection-start-line="247" selection-start-column="81" selection-end-line="247" selection-end-column="81" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
@@ -440,8 +440,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/dual_net.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="259">
-          <caret line="248" column="32" lean-forward="true" selection-start-line="248" selection-start-column="32" selection-end-line="248" selection-end-column="32" />
+        <state relative-caret-position="244">
+          <caret line="247" column="81" lean-forward="false" selection-start-line="247" selection-start-column="81" selection-end-line="247" selection-end-column="81" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
           </folding>
