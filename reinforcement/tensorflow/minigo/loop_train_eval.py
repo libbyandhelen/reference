@@ -268,6 +268,7 @@ def rl_loop():
 
 
     if goparams.EVALUATE_MODELS:
+      print("hahaha")
       if not evaluate(model_name, new_model):
         bury_latest_model()
 
