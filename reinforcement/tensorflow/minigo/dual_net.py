@@ -242,10 +242,10 @@ def train(working_dir, tf_records, generation_num, **hparams):
             policy_output, value_output, logits = model(features)
 
             loss = nn.CrossEntropyLoss()
-            print(logits.shape)
-            print(pi.shape)
             pi = torch.max(pi, 1)[1]
             policy_cost = torch.mean(loss(logits.float().cuda(), pi.long().cuda()))
+            print(value_output.shape)
+            print(outcome.shape)
             value_cost = torch.mean((value_output - outcome)**2)
 
             combined_cost = policy_cost + value_cost
