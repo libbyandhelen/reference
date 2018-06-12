@@ -237,7 +237,7 @@ def train(working_dir, tf_records, generation_num, **hparams):
             features = features.permute(0, 3, 1, 2)
             features = Variable(features.float())
             pi = Variable(pi.float())
-            outcome = Variable(outcome.long())
+            outcome = Variable(outcome.float().cuda())
 
             policy_output, value_output, logits = model(features)
 
